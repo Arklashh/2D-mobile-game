@@ -18,6 +18,7 @@ public class PlayerLocomotion : MonoBehaviour
     public LayerMask groundLayer;
 
     public Rigidbody2D rb;
+    private Animator anim;
 
     private void Awake()
     {
@@ -35,6 +36,12 @@ public class PlayerLocomotion : MonoBehaviour
         };
 
         _controls.Player.Jump.performed += ctx => Jump();
+    }
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
