@@ -8,7 +8,7 @@ public class PlayerLocomotion : MonoBehaviour
     PlayerControls _controls;
 
     float direction = 0;
-    public float speed = 400;
+    public float moveSpeed = 400;
     public bool isRight = true;
 
     public float jumpForce = 5;
@@ -46,7 +46,7 @@ public class PlayerLocomotion : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
 
-        rb.velocity = new Vector2(direction * speed * Time.fixedDeltaTime, rb.velocity.y);
+        rb.velocity = new Vector2(direction * moveSpeed * Time.fixedDeltaTime, rb.velocity.y);
 
         if (isRight && direction < 0 || !isRight && direction > 0)
             Flip();
