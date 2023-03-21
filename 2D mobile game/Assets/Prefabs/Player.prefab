@@ -57,7 +57,7 @@ MonoBehaviour:
   groundCheck: {fileID: 1852101028115993454}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 640
   rb: {fileID: 1852101026161305994}
 --- !u!50 &1852101026161305994
 Rigidbody2D:

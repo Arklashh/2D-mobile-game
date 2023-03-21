@@ -38,11 +38,17 @@ public class PlayerManager : MonoBehaviour
     public void PauseGame()
     {
         Time.timeScale = 0;
-        pauseMenuScreen.SetActive(false);
+        pauseMenuScreen.SetActive(true);
     }
 
     public void GoToMenu()
     {
         SceneManager.LoadScene("Menu");
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        pauseMenuScreen?.SetActive(false);
     }
 }
