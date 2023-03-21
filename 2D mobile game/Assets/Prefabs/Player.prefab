@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1852101026161305993}
   - component: {fileID: 1852101026161305994}
   - component: {fileID: 1852101026161305995}
+  - component: {fileID: 3930720588148487482}
+  - component: {fileID: -2402555930047425009}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -49,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fbbbfb6a6023e94d9fec4b6b47b9b44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 400
+  moveSpeed: 400
   isRight: 1
   jumpForce: 5
   groundCheck: {fileID: 1852101028115993454}
@@ -94,6 +96,33 @@ CapsuleCollider2D:
   m_Offset: {x: -0.08443689, y: -0.3236723}
   m_Size: {x: 1.2880735, y: 1.6727271}
   m_Direction: 0
+--- !u!114 &3930720588148487482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852101026161305997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f029399fbc9ca14b990a9da0667a0b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 3487400839958700682, guid: 386d5818aad031144b912760f6d19a52, type: 3}
+  firePoint: {fileID: 6918432504110237488}
+  force: 400
+--- !u!114 &-2402555930047425009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852101026161305997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a759ced1406c179469ddaef6ae65b0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1852101027854247393
 GameObject:
   m_ObjectHideFlags: 0
