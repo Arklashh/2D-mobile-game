@@ -8,7 +8,9 @@ using Cinemachine;
 public class PlayerManager : MonoBehaviour
 {
     public static bool isGameOver;
+    public static bool isWinning;
     public GameObject gameOverScreen;
+    public GameObject winningScreen;
     public GameObject pauseMenuScreen;
 
     public CinemachineVirtualCamera VCam;
@@ -27,6 +29,11 @@ public class PlayerManager : MonoBehaviour
         if (isGameOver)
         {
             gameOverScreen.SetActive(true);
+        }
+
+        if (isWinning)
+        {
+            winningScreen.SetActive(true);
         }
     }
 

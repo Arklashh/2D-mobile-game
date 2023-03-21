@@ -24,5 +24,10 @@ public class PlayerCollision : MonoBehaviour
             PlayerManager.isGameOver = true;
             gameObject.SetActive(false);
         }
+
+        if(collision.transform.tag == "CheckPoint")
+        {
+            PlayerManager.isWinning = true;
+        }
     }
 }
