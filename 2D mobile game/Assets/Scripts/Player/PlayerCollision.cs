@@ -9,11 +9,10 @@ public class PlayerCollision : MonoBehaviour
     {
         if(collision.transform.tag == "Enemy")
         {
-            // Add later when enemies are done.
-            //HealthManager.health--;
-            //if (HealthManager.health <= 0)
-            //    PlayerManager.isGameOver = true;
-            //    gameObject.SetActive(false);
+            HealthManager.health--;
+            if (HealthManager.health <= 0)
+                PlayerManager.isGameOver = true;
+            gameObject.SetActive(false);
         }
         else
         {
