@@ -44,6 +44,8 @@ public class PlayerLocomotion : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (PlayerManager.isWinning) 
+            return;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
 
         rb.velocity = new Vector2(direction * moveSpeed * Time.fixedDeltaTime, rb.velocity.y);
@@ -60,6 +62,8 @@ public class PlayerLocomotion : MonoBehaviour
 
     void Jump()
     {
+        if (PlayerManager.isWinning)
+            return;
         if (isGrounded)
         {
             numberOfJumps = 0;
