@@ -16,7 +16,13 @@ public class PlayerCollision : MonoBehaviour
                 PlayerManager.isGameOver = true;
                 gameObject.SetActive(false);
             }
+        }
 
+        if(collision.transform.tag == "Trap")
+        {
+            HealthManager.health = 0;
+            PlayerManager.isGameOver = true;
+            gameObject.SetActive(false);
         }
     }
 }
