@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 6644542853354955600}
   - component: {fileID: 6644542853354955603}
   - component: {fileID: 6644542853354955614}
+  - component: {fileID: 5532175062364701195}
   m_Layer: 8
   m_Name: Enemy_Possum
   m_TagString: Enemy
@@ -108,7 +109,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 8
   m_Sprite: {fileID: 21300000, guid: baa0c643131554ff99574059ec7da1cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -183,6 +184,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!58 &5532175062364701195
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6644542853354955605}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.05766937, y: -0.026546214}
+  serializedVersion: 2
+  m_Radius: 0.11775373
 --- !u!1 &6644542853497369104
 GameObject:
   m_ObjectHideFlags: 0
