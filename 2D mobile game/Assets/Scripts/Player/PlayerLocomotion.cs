@@ -22,6 +22,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     private void Awake()
     {
+        // Creates a new PlayerControls on Awake
         _controls = new PlayerControls();
         _controls.Enable();
 
@@ -46,19 +47,24 @@ public class PlayerLocomotion : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // if the player wins the controllers disables.
         if (PlayerManager.isWinning) 
             return;
 
+        // Checks if the player are grinded
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
+        // If the player is grounded the animator sets it's bool to true.
         anim.SetBool("isGrounded", isGrounded);
 
         rb.velocity = new Vector2(direction * moveSpeed * Time.fixedDeltaTime, rb.velocity.y);
         anim.SetFloat("speed", Mathf.Abs(direction));
 
+        // Checking which direction the player is moving and flips accordingly to direction
         if (isRight && direction < 0 || !isRight && direction > 0)
             Flip();
     }
 
+    // Flip method to control which way the sprite is facing towards.
     void Flip()
     {
         isRight = !isRight;
@@ -67,8 +73,10 @@ public class PlayerLocomotion : MonoBehaviour
 
     void Jump()
     {
+        // if the player wins the controllers disables.
         if (PlayerManager.isWinning)
             return;
+
         if (isGrounded)
         {
             numberOfJumps = 0;
