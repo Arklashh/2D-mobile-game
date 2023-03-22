@@ -20,6 +20,7 @@ public class PlayerManager : MonoBehaviour
     private void Awake()
     {
         Time.timeScale = 1;
+        isWinning = false;
         GameObject player = Instantiate(playerPrefab);
         VCam.m_Follow = player.transform;
         isGameOver = false;
@@ -36,6 +37,8 @@ public class PlayerManager : MonoBehaviour
         {
             winningScreen.SetActive(true);
         }
+        else
+            winningScreen.SetActive(false);
     }
 
     public void ReplayLevel()
