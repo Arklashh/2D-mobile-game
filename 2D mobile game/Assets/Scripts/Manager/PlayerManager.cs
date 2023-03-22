@@ -19,6 +19,7 @@ public class PlayerManager : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 1;
         GameObject player = Instantiate(playerPrefab);
         VCam.m_Follow = player.transform;
         isGameOver = false;
