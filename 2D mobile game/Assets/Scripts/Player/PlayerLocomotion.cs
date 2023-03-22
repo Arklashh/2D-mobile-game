@@ -18,6 +18,7 @@ public class PlayerLocomotion : MonoBehaviour
     public LayerMask groundLayer;
 
     public Rigidbody2D rb;
+    public Animator anim;
 
     private void Awake()
     {
@@ -40,15 +41,19 @@ public class PlayerLocomotion : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void FixedUpdate()
     {
         if (PlayerManager.isWinning) 
             return;
+
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
+        anim.SetBool("isGrounded", isGrounded);
 
         rb.velocity = new Vector2(direction * moveSpeed * Time.fixedDeltaTime, rb.velocity.y);
+        anim.SetFloat("speed", Mathf.Abs(direction));
 
         if (isRight && direction < 0 || !isRight && direction > 0)
             Flip();
