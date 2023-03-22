@@ -11,11 +11,5 @@ public class BulletManager : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
-
-        if (collision.tag == "Name of the enemy tag")
-        {
-            // collision.GetComponent < "the enemy" > ().TakeDamage(25);
-                Destroy(gameObject);
-        }
     }
 }
